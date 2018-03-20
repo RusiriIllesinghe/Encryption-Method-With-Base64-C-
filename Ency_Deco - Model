@@ -1,0 +1,12 @@
+ private void Base64encode(string Datalaintext , out string abc)
+        {
+            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(Datalaintext);
+            abc = System.Convert.ToBase64String(plainTextBytes);
+
+        }
+        private void Base64Decode(string base64EncodedData ,out string decoded)
+        {
+            var base64EncodedBytes = System.Convert.FromBase64String(base64EncodedData);
+            decoded = System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
+            
+        }
